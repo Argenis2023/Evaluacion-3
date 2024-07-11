@@ -1,0 +1,72 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="https://i.imgur.com/s5lxjUx.png" class="d-block w-100" alt="Banner 1">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.imgur.com/luKrCYg.png" class="d-block w-100" alt="Banner 2">
+        </div>
+        <div class="carousel-item">
+            <img src="https://i.imgur.com/SGSb3OJ.png" class="d-block w-100" alt="Banner 3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+
+<div class="container text-center mt-4">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+            <div class="card">
+                <img class="card-img-top" src="https://i.imgur.com/1iMYoRg.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Muffin</h5>
+                    <p class="card-text">Harina de trigo, levadura, leche, mantequilla, huevos, sal, aceite y agregados</p>
+                    <a href="#" class="btn btn-primary">Agregar al Carro</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+          <div class="card">
+              <img class="card-img-top" src="https://i.imgur.com/X3l0BXG.png" alt="Card image cap">
+              <div class="card-body">
+                  <h5 class="card-title">Donut</h5>
+                  <p class="card-text">Harina de trigo, levadura, leche, mantequilla, huevos, sal, aceite y azúcar glas</p>
+                  <a href="#" class="btn btn-primary">Agregar al Carro</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div class="card">
+            <img class="card-img-top" src="https://i.imgur.com/JvbDbVd.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Tartaleta</h5>
+                <p class="card-text">Contiene frutas frescas,azúcar, canela, huevos, leche y extracto de vainilla</p>
+                <a href="#" class="btn btn-primary">Agregar al Carro</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card">
+          <img class="card-img-top" src="https://i.imgur.com/0eTd1n1.png" title="source: imgur.com" alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title">Berlin</h5>
+              <p class="card-text">Levadura, leche, mantequilla, huevos, relleno a tu elección y azúcar glas</p>
+              <a href="#" class="btn btn-primary">Agregar al Carro</a>
+          </div>
+      </div>
+  </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

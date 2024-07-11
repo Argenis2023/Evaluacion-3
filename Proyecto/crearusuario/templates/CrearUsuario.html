@@ -1,0 +1,44 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div class="container text-center">
+    <img class="mb-4" src="https://th.bing.com/th/id/OIP.S9PEQI0Z_ZTHQlNbsOMRYwHaHa?rs=1&pid=ImgDetMain" alt="" width="150" height="150">
+    <h1>Crear Usuario</h1></div>
+    <section class="container">
+      <form action="">
+          <div class="row">
+              <div class="col-12 col-sm-6 col-log-4">
+                  <label for="">Nombre</label>
+                  <input id="nombre" class="w-100" type="text"> 
+              </div>
+              <div class="col-12 col-sm-6 col-log-4">
+                  <label for="">Apellido</label>
+                  <input id="apellido" class="w-100" type="text"> 
+              </div>
+              <div class="col-12 col-sm-6 col-log-4">
+                  <label for="">Telefono</label>
+                  <input id="telefono" class="w-100" type="number"> 
+              </div>
+              <div class="col-12 col-sm-6 col-log-4">
+                  <label for="">Correo</label>
+                  <input id="correo" class="w-100" type="email"> 
+              </div>
+              <div class="col-12 col-sm-6 col-log-4">
+                  <label for="">Contraseña</label>
+                  <input id="password" class="w-100" type="password"> 
+              </div>
+              <div class="col-12 col-sm-6 col-log-4">
+                  <label for="">Repetir Contraseña</label>
+                  <input id="repetirpassword" class="w-100" type="password"> 
+              </div>
+          </div>
+          <br>
+          <div class="container text-center">
+              <button class="btn btn-lg btn-primary btn-block mb-3" type="submit" onclick="return obtenerdatosCreaUsuario()">Registrar</button> 
+              <div id='error'></div> 
+      </form>
+  </section>
+  
+  <div id="dynamicModalContainer"></div> 
+
+  {% endblock %}

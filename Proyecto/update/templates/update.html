@@ -1,0 +1,47 @@
+{% extends "template.html" %}
+{% block content %}
+    <h1>Modificar</h1>
+    <form method="post">
+        {% csrf_token %}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Producto</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in inventario %}
+                <tr>
+                    <td>{{ item.idproducto.id }}</td>
+                    <td><input type="text" name="nombre_{{ item.idproducto.id }}" value="{{ item.idproducto.nombre }}"></td>
+                    <td><input type="text" name="descripcion_{{ item.idproducto.id }}" value="{{ item.idproducto.descripcion }}"></td>
+                    <td><input type="text" name="precio_{{ item.idproducto.id }}" value="{{ item.idproducto.precio }}"></td>
+                    <td><input type="text" name="cantidad_{{ item.idproducto.id }}" value="{{ item.cantidad }}"></td>
+                    <td>
+                        <button type="submit" name="update" value="{{ item.idproducto.id }}">Guardar</button>
+                        <button type="submit" name="delete" value="{{ item.idproducto.id }}">Eliminar</button>
+                    </td>
+                </tr>
+                {% endfor %}
+                <!-- Nueva fila para agregar un producto -->
+                <tr>
+                    <td>Nuevo</td>
+                    <td><input type="text" name="nombre_new" placeholder="Nombre"></td>
+                    <td><input type="text" name="descripcion_new" placeholder="Descripción"></td>
+                    <td><input type="text" name="precio_new" placeholder="Precio"></td>
+                    <td><input type="text" name="cantidad_new" placeholder="Cantidad"></td>
+                    <td><button type="submit" name="create_new">Agregar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <!-- Botón para redirigir a otra aplicación -->
+    <form method="get" action="{% url 'mostrar_inventario' %}">
+        <button type="submit">Mostrar Inventario</button>
+    </form>
+{% endblock %}
